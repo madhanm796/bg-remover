@@ -24,6 +24,8 @@ MAX_CONTENT_LENGTH = 25 * 1024 * 1024  # 25 MB upload limit
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(RESULTS_FOLDER, exist_ok=True)
 
+port = int(os.environ.get('PORT', 10000))
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['RESULTS_FOLDER'] = RESULTS_FOLDER
@@ -212,4 +214,4 @@ def download_result(filename):
 
 
 if __name__ == '__main__':
-    app.run(debug=False, port=80)
+    app.run(host='0.0.0.0', port=port)

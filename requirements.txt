@@ -1,0 +1,4 @@
+flask>=2.0
+rembg>=2.0
+pillow
+Werkzeug

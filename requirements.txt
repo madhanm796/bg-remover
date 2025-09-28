@@ -2,3 +2,4 @@ Flask
 rembg
 onnxruntime
 Werkzeug
+gunicorn
